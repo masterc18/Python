@@ -22,7 +22,7 @@ while True:
         print("Do you want to add a new one")
         answer = input("Write yes or no\n")
         if (answer.lower() == "yes"):
-            new_Employee = input("Write the name of the new guy: ")
+            new_Employee = input("Write the name again to confirm: ")
             employees.append(new_Employee)
             print("It's been saved")
             print(employees)
