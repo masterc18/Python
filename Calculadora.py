@@ -1,6 +1,7 @@
 
 # para borrar consola
 import os
+from math import sqrt
 os.system("cls")
 
 
@@ -20,37 +21,50 @@ def dividir(num1, num2):
     return num1 / num2
 
 
+def raiz(num1):
+    return sqrt(num1)
+
+
 def calculator():
 
-    num1 = float(input("Dime un numero\n"))
-    num2 = float(input("Dime otro numero\n"))
+    op = 0
+    while op != 6:
+        msn = """1.Sumar
+2. Restar
+3. Multiplicar
+4. Dividir
+5. Raiz
+6. Salir"""
+        print(msn)
+        if (op == 1):
+            num1 = eval(input("Dime un numero: "))
+            num2 = eval(input("Dime otro numero: "))
+            print(f"El rsultado es: {suma}")
+        elif op == 2:
+            num1 = eval(input("Dime un numero: "))
+            num2 = eval(input("Dime otro numero: "))
+            print(f"El resultado es: {resta}")
+        elif op == 3:
+            num1 = eval(input("Dime un numero: "))
+            num2 = eval(input("Dime otro numero: "))
+            print(f"El resultado es: {mult}")
+        elif op == 4:
+            num1 = eval(input("Dime un numero: "))
+            num2 = eval(input("Dime otro numero: "))
+            print(f"El resultado es: {dividir}")
+        elif op == 5:
+            num1 = eval(input("Dime un numero: "))
+            print(f"El resultado es: {raiz}")
+        elif op == 6:
+            print("Saliendo.......")
+        else:
+            print("Opcion invalida")
+        os.system("pause")
 
-    # while True:
-    #     print("Select a option")
-    #     print("1.Addition")
-    #     print("2.Rest")
-    #     print("3.Multiplic")
-    #     print("4.Dividir")
 
-    #     op = int(input("Write a option\n"))
+def main():
+    calculator()
 
-    #     if op == "1":
-    #         print(f"the addition between {num1} and {num2} is {suma(num1,num2)}")
-    #     elif op == "2":
-    #         print(f"The rest between {num1} and {num2} is {resta(num1,num2)}")
-    #     elif op == "3":
-    #         print(f"The multiplication between {num1} and {num2} is {mult(num1,num2)}")
-    #     elif op == "4":
-    #         print(f"The division between {num1} and {num2} is {dividir}")
-    #     else:
-    #         print("Invalid opcion")
-            
-    # print(op)
-
-    print("La suma es ", suma(num1,num2))
-    print("La resta es ",resta(num1,num2))
-    print("la multiplicacion es ",mult(num1,num2))
-    print("La division es ",dividir(num1,num2))
-
-
-calculator()
+    
+    
+main()
