@@ -9,7 +9,7 @@ employees = ['Jose', 'Lucia', 'Armando']
 
 # print(employees)
 
-search = input("Write name of the employee: ")
+search = input("Write name you are looking: ")
 
 
 while True:
